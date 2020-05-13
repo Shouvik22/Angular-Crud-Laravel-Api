@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-12">
+        <button class="btn btn-success" (click)="onAdd()">Add</button> || <a (click)="logout()" style="cursor: pointer;">Logout</a><br>
+        <table border="1">
+            <tr>
+                <td>Id</td>
+                <td>Product Name</td>
+                <td>Price</td>
+                <td>Image</td>
+                <td>Status</td>
+                <td>Action</td>
+            </tr>
+            <tr *ngFor="let result of results; let i=index">
+
+                <td>{{ i + 1 }}</td>
+                <td>{{ result.name }}</td>
+                <td>{{ result.price }}</td>
+                <td><img src="{{path}}{{ result.image }}" height="100" width="100"></td>
+                <td>{{ result.status }}</td>
+                <td><button class="btn btn-primary" (click)="onEdit(result.id)">Edit</button>|<button class="btn btn-danger" (click)="onDelete(result)">Delete</button></td>
+            </tr>
+        </table>
+    </div>
+</div>

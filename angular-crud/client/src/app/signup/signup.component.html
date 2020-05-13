@@ -1,0 +1,32 @@
+<form (ngSubmit)="onSignUp(f)" #f="ngForm">
+    <div class="row">
+        <div class="row">
+            <div class="col-md-12">
+                <label for="name">Name:</label>
+                <input type="name" class="form-control" id="name" name="name" #name="ngModel" ngModel required>
+                <span class="help-block" *ngIf="!name.valid && name.touched">Please Enter a name</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" #password="ngModel" ngModel required>
+                <span class="help-block" *ngIf="!password.valid && password.touched">Please enter a password</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label for="password">Re-Password:</label>
+                <input type="password" class="form-control" id="password" name="repassword" #repassword="ngModel" ngModel required>
+                <span class="help-block" *ngIf="!repassword.valid && repassword.touched">Please re-enter the password</span>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-success" [disabled]="!f.valid">Signup</button>
+                <!-- <a routerLink="/signup">Click here for signup</a> -->
+            </div>
+        </div>
+    </div>
+</form>
