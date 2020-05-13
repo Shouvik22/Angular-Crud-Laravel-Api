@@ -32,9 +32,7 @@ class ApiController extends Controller
         date_default_timezone_set('Asia/Calcutta');
         $cur_date          = date("Y-m-d");
         $cur_date_time     = date("Y-m-d H:i:s");
-        /*-----------Upload Path Url------------------*/
-        $upload_path       = '/home/navkib7m/public_html/LelaBeauty/public/uploads/';
-        //  $upload_path       = '/opt/lampp/htdocs/projects/barbuddy/public/uploads/images/';
+        
         /*--------------------Secret Key Assign For login-----------------------*/
         $privatekey                             = 'FdZe43N0Af2jt21QYegW'; //private Key
         $comapany_code                          = 'parent1'; //Company Code
@@ -46,8 +44,7 @@ class ApiController extends Controller
         //blockio init
         $this->cur_date                                   = $cur_date;
         $this->cur_date_time                              = $cur_date_time;
-        $this->upload_path                                = $upload_path;
-        $this->privatekey                                  = $privatekey;
+       
         $this->comapany_code                               = $comapany_code;
         $this->accessKey                                   = $accessKey;
         $this->comapany_code_for_bearer_token_generate     = $comapany_code_for_bearer_token_generate;
